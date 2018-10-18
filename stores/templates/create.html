@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<form action="{% url 'create' %}" method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+		{{store.as_p}}
+		<input type="submit" value="Create" class="btn" style="background-color: #e3f2fd; color: black;">
+	</form>
+{% endblock content %}
